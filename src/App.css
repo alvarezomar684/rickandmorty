@@ -1,0 +1,65 @@
+/* .App {
+  text-align: center;
+} */
+
+.search {
+  /* background-image: url(./mpc-hc64_mldyurQtOq.jpg); */ /*Recortarle la altura */
+  /* background-image: url(./pjimage-30.jpg);   */  /*Posible ganador mover el search y la info del planeta abajo de la imagen */
+  /* background-image: url(./PORTADARICKMORTY.png);     Posible ganador mover el search y la info del planeta abajo de la imagen */
+  /* background-image: url(./rick-and-morty-4k-wallpaper-scaled.jpg); Posible ganador */
+  /*
+   background-image: url(./RICKMORTY_PRESENTS_V1_-_COVER_A_FNL_WEB.jpg); GANADORA
+   background-image: url(./S1e10_eyyyy.png); GANADORA
+   background-image: url(./1103754.jpg); GANADORA
+   background-image: url(./91ht9KbsprL.jpg); Recortarle la altura 
+  */
+  background-image: url(./Rick-And-Morty-Wallpapers-67-Galaxy-Wallpapers-From-WallpaperHook.com-For-Free.png); /*GANADORA*/  
+  background-repeat: no-repeat;
+  min-height: 105vh; /*105*/  
+  color: white;  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;  
+  align-items:baseline; 
+  justify-content: center;
+  border: 1px solid white;
+}
+
+.search > div:first-child {  
+  flex-basis: auto;
+}
+
+.search > div:last-child {  
+  flex-basis: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+@media (max-width: 432px){   
+    
+  .search {
+    background-image: url(./cell02.jpg);  /* GANADORA*/
+    /* background-image: url(./cell03.jpg);  GANADORA     */
+    background-repeat: no-repeat;
+    min-height: 100vh;  
+    color: white; 
+  }
+  
+  
+}
+
+
+.info-characters {
+  background-color: #282c34;
+  min-height: 100vh;  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;  
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  text-align: center;
+}
+

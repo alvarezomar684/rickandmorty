@@ -18,21 +18,58 @@
   min-height: 105vh; /*105*/  
   color: white;  
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;  
-  align-items:baseline; 
-  justify-content: center;
+  flex-direction: column;  
+  /* align-items:flex-start;  */
+  /* justify-content: center; */
   border: 1px solid white;
 }
 
-.search > div:first-child {  
-  flex-basis: auto;
+.search > div:first-child {
+  margin-top: 20px;  
+  flex-basis: 100%;
+  height: 20px;  
+  display: flex;
+  justify-content: center;
 }
 
+.search > div:first-child > input[type="text"] {
+  border: 2px solid green;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #ccc;
+  font-size: calc(0.4rem + 1vmin);
+  text-transform: capitalize;  
+  min-width: 270px;
+  text-align: center;
+}
+
+.search > div:first-child > button {
+  /* background-color: #ca3434; */
+  background-image: url(./nave2.png);
+  background-repeat: no-repeat;
+  height: 93px;
+  width: 154px;
+  border: 1px solid #87c386;
+  border-radius: 5px;
+  margin-left: 10px;
+  font-size: calc(0.4rem + 1vmin); 
+  color: #87c386;
+  text-transform: uppercase; 
+}
+
+
+
 .search > div:last-child {  
-  flex-basis: auto;
+  flex-basis: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: center;  
+}
+
+.search > div:last-child > h4 {
+  margin-right: 10px;
+  font-size: calc(0.6rem + 1vmin); 
 }
 
 
@@ -46,13 +83,18 @@
     min-height: 100vh;  
     color: white; 
   }
+
+  .search > div:first-child > input[type="text"] {     
+    min-width: 165px;    
+  }
   
   
 }
 
 
 .info-characters {
-  background-color: #282c34;
+  /* background-color: #282c34; */
+  background-color: #026003;
   min-height: 100vh;  
   display: flex;
   flex-direction: row;
@@ -61,5 +103,10 @@
   font-size: calc(10px + 2vmin);
   color: white;
   text-align: center;
+}
+
+.info-characters > div {
+  /* border: 1px solid white; */
+  margin-bottom: 40px;
 }
 

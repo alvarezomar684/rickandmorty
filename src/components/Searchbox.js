@@ -6,8 +6,8 @@ export const Searchbox = ({onSearch}) => {
     
     return (
         <div>
-            <input value={value} onChange={(e) => setValue(e.target.value)} />
-            <button onClick={() => { onSearch(value) }} >Search</button>
+            <input type={"text"} placeholder={"Escribe el universo deseado (1-108)"} value={value} onChange={(e) => setValue(e.target.value)} />
+            <button onClick={() => { onSearch(value) }} ></button>
         </div>
     )
 }

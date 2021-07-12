@@ -55,6 +55,8 @@ function App() {
     setQueryTerm(query)
   }
 
+
+ 
  
 
   const urlCharacter01 = characters[0]
@@ -67,6 +69,9 @@ function App() {
   const urlCharacter08 = characters[7]
   const urlCharacter09 = characters[8]
   const urlCharacter10 = characters[9]  
+
+  
+ 
 
   
 
@@ -290,9 +295,28 @@ function App() {
     }
   },[urlCharacter10])
 
+
+  // const styles1 = {
+  //   backgroundColor: "green",
+  //   color: "white"
+  // }
+
   
+  // const styles = {
+  //   border: '1px solid red',
+  //   color: "blue"
+    
+  // }
+
+  // const [changeStyle, setChangeStyle] = useState(styles1)
+
  
 
+  // useEffect(()=>{
+  //   if(infoPlanet != null){
+  //     setChangeStyle(styles)
+  //   } 
+  // },[infoPlanet])
   
 
   return (
@@ -307,20 +331,20 @@ function App() {
           </div>  
         </div>  */}
         <div className="search">          
-          <Searchbox onSearch={handleSearch} />          
+          <Searchbox onSearch={handleSearch}  />          
           {infoPlanet && <LocationInfo infoPlanet={infoPlanet} nameLocation={infoPlanet.name} type={infoPlanet.type} dimension={infoPlanet.dimension}  />}          
         </div>              
-        <div className="info-characters">
-          <ResidentInfo01 residentName01={residentName01}  residentImg01={residentImg01}  residetStatus01={residetStatus01}  residentOrigin01={residentOrigin01}  residentEpisodes01={residentEpisodes01} />
-          <ResidentInfo02 residentName02={residentName02}  residentImg02={residentImg02}  residetStatus02={residetStatus02}  residentOrigin02={residentOrigin02}  residentEpisodes02={residentEpisodes02} />
-          <ResidentInfo03 residentName03={residentName03}  residentImg03={residentImg03}  residetStatus03={residetStatus03}  residentOrigin03={residentOrigin03}  residentEpisodes03={residentEpisodes03} />
-          <ResidentInfo04 residentName04={residentName04}  residentImg04={residentImg04}  residetStatus04={residetStatus04}  residentOrigin04={residentOrigin04}  residentEpisodes04={residentEpisodes04} />
-          <ResidentInfo05 residentName05={residentName05}  residentImg05={residentImg05}  residetStatus05={residetStatus05}  residentOrigin05={residentOrigin05}  residentEpisodes05={residentEpisodes05} />
-          <ResidentInfo06 residentName06={residentName06}  residentImg06={residentImg06}  residetStatus06={residetStatus06}  residentOrigin06={residentOrigin06}  residentEpisodes06={residentEpisodes06} />
-          <ResidentInfo07 residentName07={residentName07}  residentImg07={residentImg07}  residetStatus07={residetStatus07}  residentOrigin07={residentOrigin07}  residentEpisodes07={residentEpisodes07} />
-          <ResidentInfo08 residentName08={residentName08}  residentImg08={residentImg08}  residetStatus08={residetStatus08}  residentOrigin08={residentOrigin08}  residentEpisodes08={residentEpisodes08} />
-          <ResidentInfo09 residentName09={residentName09}  residentImg09={residentImg09}  residetStatus09={residetStatus09}  residentOrigin09={residentOrigin09}  residentEpisodes09={residentEpisodes09} />
-          <ResidentInfo10 residentName10={residentName10}  residentImg10={residentImg10}  residetStatus10={residetStatus10}  residentOrigin10={residentOrigin10}  residentEpisodes10={residentEpisodes10} />
+        <div className="info-characters" >
+          {urlCharacter01 && <ResidentInfo01 residentName01={residentName01}  residentImg01={residentImg01}  residetStatus01={residetStatus01}  residentOrigin01={residentOrigin01}  residentEpisodes01={residentEpisodes01} />}
+          {urlCharacter02 && <ResidentInfo02 residentName02={residentName02}  residentImg02={residentImg02}  residetStatus02={residetStatus02}  residentOrigin02={residentOrigin02}  residentEpisodes02={residentEpisodes02} />}
+          {urlCharacter03 && <ResidentInfo03 residentName03={residentName03}  residentImg03={residentImg03}  residetStatus03={residetStatus03}  residentOrigin03={residentOrigin03}  residentEpisodes03={residentEpisodes03} />}
+          {urlCharacter04 && <ResidentInfo04 residentName04={residentName04}  residentImg04={residentImg04}  residetStatus04={residetStatus04}  residentOrigin04={residentOrigin04}  residentEpisodes04={residentEpisodes04} />}
+          {urlCharacter05 && <ResidentInfo05 residentName05={residentName05}  residentImg05={residentImg05}  residetStatus05={residetStatus05}  residentOrigin05={residentOrigin05}  residentEpisodes05={residentEpisodes05} />}
+          {urlCharacter06 && <ResidentInfo06 residentName06={residentName06}  residentImg06={residentImg06}  residetStatus06={residetStatus06}  residentOrigin06={residentOrigin06}  residentEpisodes06={residentEpisodes06} />}
+          {urlCharacter07 && <ResidentInfo07 residentName07={residentName07}  residentImg07={residentImg07}  residetStatus07={residetStatus07}  residentOrigin07={residentOrigin07}  residentEpisodes07={residentEpisodes07} />}
+          {urlCharacter08 && <ResidentInfo08 residentName08={residentName08}  residentImg08={residentImg08}  residetStatus08={residetStatus08}  residentOrigin08={residentOrigin08}  residentEpisodes08={residentEpisodes08} />}
+          {urlCharacter09 && <ResidentInfo09 residentName09={residentName09}  residentImg09={residentImg09}  residetStatus09={residetStatus09}  residentOrigin09={residentOrigin09}  residentEpisodes09={residentEpisodes09} />}
+          {urlCharacter10 && <ResidentInfo10 residentName10={residentName10}  residentImg10={residentImg10}  residetStatus10={residetStatus10}  residentOrigin10={residentOrigin10}  residentEpisodes10={residentEpisodes10} />}
         </div>
         
         

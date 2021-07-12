@@ -21,10 +21,10 @@ export const LocationInfo = ({nameLocation,type,dimension,infoPlanet}) => {
     return (
         <div>
             
-            <h4>{nameLocation}</h4>
-            <h4>{type}</h4>
-            <h4>{dimension}</h4>
-            <h4>{people}</h4>
+            <h4>Name: {nameLocation}</h4>
+            <h4>Type: {type}</h4>
+            <h4>Dimension: {dimension}</h4>
+            <h4>Population: {people}</h4>
 
             
             

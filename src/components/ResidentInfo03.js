@@ -3,7 +3,7 @@ import React from 'react'
 export const ResidentInfo03 = ({urlCharacter03,residentName03,residentImg03,residetStatus03,residentOrigin03,residentEpisodes03}) => {
     if(urlCharacter03){
         return (
-            <div style={{border: '2px solid white'}}>
+            <div style={{border: '2px solid white' , backgroundColor: "#153e11"}}>
                 <h6>Name: {residentName03}</h6>
                 <img src={residentImg03} alt={residentName03} />
                 <h6>Status: {residetStatus03}</h6>

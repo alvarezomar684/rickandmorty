@@ -13,30 +13,21 @@ import { ResidentInfo07 } from './components/ResidentInfo07';
 import { ResidentInfo08 } from './components/ResidentInfo08';
 import { ResidentInfo09 } from './components/ResidentInfo09';
 import { ResidentInfo10 } from './components/ResidentInfo10';
-// import Prueba from './components/Prueba';
-
-
 
 function App() {
 
-
   const [infoPlanet, setinfoPlanet] = useState(null)
   const [queryTerm, setQueryTerm] = useState('')
-  const [characters,setCharacters] = useState([]) 
-  
+  const [characters,setCharacters] = useState([])   
 
 
   useEffect(() => {
     if (queryTerm) {
-
       const func = async () => {
         const res = await LocationContainer(queryTerm)      
         setinfoPlanet(res)
       }
-
       func()
-
-
     }
   }, [queryTerm])
 
@@ -45,8 +36,7 @@ function App() {
       setCharacters(infoPlanet.residents)
       if(characters.length > 9){
         characters.splice(10,characters.length)
-      }
-      
+      }      
     }
   },[infoPlanet,characters])
   
@@ -59,19 +49,17 @@ function App() {
     return Math.floor(Math.random() * (max - min)) + min;
   }   
 
+  
+
   useEffect(() =>{
     if(infoPlanet === null){
       ;(async()=>{        
-        // let url = "https://rickandmortyapi.com/api/location/5"
         let url = `https://rickandmortyapi.com/api/location/${getRandomInt(1,108)}`
         const response = await fetch(url).then(res => res.json())                
         setinfoPlanet(response)
       })()
     }
-  },[infoPlanet])
-
- 
- 
+  },[infoPlanet]) 
 
   const urlCharacter01 = characters[0]
   const urlCharacter02 = characters[1]
@@ -83,11 +71,6 @@ function App() {
   const urlCharacter08 = characters[7]
   const urlCharacter09 = characters[8]
   const urlCharacter10 = characters[9]  
-
-  
- 
-
-  
 
   const [residentName01, setResidentName01] = useState("")
   const [residentImg01, setResidentImg01] = useState("")
@@ -158,8 +141,7 @@ function App() {
         setResidentImg01(response.image)
         setResidentStatus01(response.status)
         setResidentOrigin01(response.origin.name)
-        setResidentEpisodes01(response.episode.length)
-        
+        setResidentEpisodes01(response.episode.length)        
       })()
       
     }
@@ -174,8 +156,7 @@ function App() {
         setResidentImg02(response.image)
         setResidentStatus02(response.status)
         setResidentOrigin02(response.origin.name)
-        setResidentEpisodes02(response.episode.length)
-        
+        setResidentEpisodes02(response.episode.length)        
       })()
       
     }
@@ -190,8 +171,7 @@ function App() {
         setResidentImg03(response.image)
         setResidentStatus03(response.status)
         setResidentOrigin03(response.origin.name)
-        setResidentEpisodes03(response.episode.length)
-        
+        setResidentEpisodes03(response.episode.length)        
       })()
       
     }
@@ -206,8 +186,7 @@ function App() {
         setResidentImg04(response.image)
         setResidentStatus04(response.status)
         setResidentOrigin04(response.origin.name)
-        setResidentEpisodes04(response.episode.length)
-        
+        setResidentEpisodes04(response.episode.length)        
       })()
       
     }
@@ -222,8 +201,7 @@ function App() {
         setResidentImg05(response.image)
         setResidentStatus05(response.status)
         setResidentOrigin05(response.origin.name)
-        setResidentEpisodes05(response.episode.length)
-        
+        setResidentEpisodes05(response.episode.length)        
       })()
       
     }
@@ -238,8 +216,7 @@ function App() {
         setResidentImg06(response.image)
         setResidentStatus06(response.status)
         setResidentOrigin06(response.origin.name)
-        setResidentEpisodes06(response.episode.length)
-        
+        setResidentEpisodes06(response.episode.length)        
       })()
       
     }
@@ -254,8 +231,7 @@ function App() {
         setResidentImg07(response.image)
         setResidentStatus07(response.status)
         setResidentOrigin07(response.origin.name)
-        setResidentEpisodes07(response.episode.length)
-        
+        setResidentEpisodes07(response.episode.length)        
       })()
       
     }
@@ -270,8 +246,7 @@ function App() {
         setResidentImg08(response.image)
         setResidentStatus08(response.status)
         setResidentOrigin08(response.origin.name)
-        setResidentEpisodes08(response.episode.length)
-        
+        setResidentEpisodes08(response.episode.length)        
       })()
       
     }
@@ -286,8 +261,7 @@ function App() {
         setResidentImg09(response.image)
         setResidentStatus09(response.status)
         setResidentOrigin09(response.origin.name)
-        setResidentEpisodes09(response.episode.length)
-        
+        setResidentEpisodes09(response.episode.length)        
       })()
       
     }
@@ -302,28 +276,17 @@ function App() {
         setResidentImg10(response.image)
         setResidentStatus10(response.status)
         setResidentOrigin10(response.origin.name)
-        setResidentEpisodes10(response.episode.length)
-        
+        setResidentEpisodes10(response.episode.length)        
       })()
       
     }
-  },[urlCharacter10])
-
-
- 
+  },[urlCharacter10]) 
+  
   
 
   return (
     <div className="App">
-      <header >
-      {/* <div className="search">
-          <div>
-            <Searchbox onSearch={handleSearch} /> 
-          </div>
-          <div>
-            {infoPlanet && <LocationInfo infoPlanet={infoPlanet} nameLocation={infoPlanet.name} type={infoPlanet.type} dimension={infoPlanet.dimension}  />}
-          </div>  
-        </div>  */}
+      <header >           
         <div className="search">          
           <Searchbox onSearch={handleSearch}  />          
           {infoPlanet && <LocationInfo infoPlanet={infoPlanet} nameLocation={infoPlanet.name} type={infoPlanet.type} dimension={infoPlanet.dimension}  />}          
@@ -339,11 +302,7 @@ function App() {
           {urlCharacter08 && <ResidentInfo08 urlCharacter08={urlCharacter08}  residentName08={residentName08}  residentImg08={residentImg08}  residetStatus08={residetStatus08}  residentOrigin08={residentOrigin08}  residentEpisodes08={residentEpisodes08} />}
           {urlCharacter09 && <ResidentInfo09 urlCharacter09={urlCharacter09}  residentName09={residentName09}  residentImg09={residentImg09}  residetStatus09={residetStatus09}  residentOrigin09={residentOrigin09}  residentEpisodes09={residentEpisodes09} />}
           {urlCharacter10 && <ResidentInfo10 urlCharacter10={urlCharacter10}  residentName10={residentName10}  residentImg10={residentImg10}  residetStatus10={residetStatus10}  residentOrigin10={residentOrigin10}  residentEpisodes10={residentEpisodes10} />}
-        </div>
-        
-        
-        {/* {list} */}
-        
+        </div>        
       </header>
     </div>
   );
@@ -352,15 +311,6 @@ function App() {
 export default App;
 
 
- //Son los links ya en lista de los personajes
-  // let personajes = [] 
-    
-  //   characters.forEach((e,i) => {
-  //     personajes.push({url:characters[i]})
-      
-  //   });   
-
-  // const list = personajes.map(e => <Prueba key={e.url} url={e.url} />)  
 
   
 

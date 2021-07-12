@@ -1,28 +1,19 @@
-/* .App {
-  text-align: center;
-} */
+@font-face {
+  font-family: "schwifty";
+  src: url(./get_schwifty.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
 
-.search {
-  /* background-image: url(./mpc-hc64_mldyurQtOq.jpg); */ /*Recortarle la altura */
-  /* background-image: url(./pjimage-30.jpg);   */  /*Posible ganador mover el search y la info del planeta abajo de la imagen */
-  /* background-image: url(./PORTADARICKMORTY.png);     Posible ganador mover el search y la info del planeta abajo de la imagen */
-  /* background-image: url(./rick-and-morty-4k-wallpaper-scaled.jpg); Posible ganador */
-  /*
-   background-image: url(./RICKMORTY_PRESENTS_V1_-_COVER_A_FNL_WEB.jpg); GANADORA
-   background-image: url(./S1e10_eyyyy.png); GANADORA
-   background-image: url(./1103754.jpg); GANADORA
-   background-image: url(./91ht9KbsprL.jpg); Recortarle la altura 
-  */
-  background-image: url(./Rick-And-Morty-Wallpapers-67-Galaxy-Wallpapers-From-WallpaperHook.com-For-Free.png); /*GANADORA*/  
+.search {  
+  background-image: url(./Rick-And-Morty-Wallpapers-67-Galaxy-Wallpapers-From-WallpaperHook.com-For-Free.png);   
   background-repeat: no-repeat;
-  min-height: 105vh; /*105*/  
-  color: white;  
+  min-height: 105vh; 
+  color: rgb(185 9 9);  
   display: flex;
   flex-direction: column;  
-  /* align-items:flex-start;  */
-  /* justify-content: center; */
   border: 1px solid white;
-  justify-content: space-between;
+  justify-content: space-between;  
 }
 
 .search > div:first-child {
@@ -34,32 +25,30 @@
 }
 
 .search > div:first-child > input[type="text"] {
-  border: 3px solid green;
+  border: 3px solid rgb(8, 179, 185);
   padding: 5px;
   border-radius: 5px;
   background-color: transparent;
-  color: #ccc;
+  color: rgb(30, 215, 221);
+  font-family: "schwifty";
   font-size: calc(0.4rem + 1vmin);
-  text-transform: capitalize;  
+  text-transform: uppercase;  
   min-width: 270px;
   text-align: center;
+  color: rgb(30, 215, 221);
+  font-family: "schwifty";
+  font-size: calc(1rem + 1vmin);   
 }
 
-.search > div:first-child > button {
-  /* background-color: #ca3434; */
+.search > div:first-child > button {  
   background-image: url(./nave2.png);
   background-repeat: no-repeat;
   height: 93px;
   width: 154px;
-  border: 1px solid #87c386;
+  border: 3px solid rgb(8, 179, 185);
   border-radius: 5px;
-  margin-left: 10px;
-  font-size: calc(0.4rem + 1vmin); 
-  color: #87c386;
-  text-transform: uppercase; 
+  margin-left: 10px; 
 }
-
-
 
 .search > div:last-child {  
   flex-basis: 100%;
@@ -70,44 +59,50 @@
 
 .search > div:last-child > h4 {
   margin-right: 10px;
-  font-size: calc(0.6rem + 1vmin); 
+  color: rgb(30, 215, 221);
+  font-family: "schwifty";
+  font-size: calc(1.5rem + 1vmin);   
 }
-
 
 
 @media (max-width: 432px){   
     
   .search {
-    background-image: url(./cell02.jpg);  /* GANADORA*/
-    /* background-image: url(./cell03.jpg);  GANADORA     */
+    background-image: url(./cell02.jpg);    
     background-repeat: no-repeat;
     min-height: 100vh;  
-    color: white; 
+    color: #1599e6; 
   }
 
   .search > div:first-child > input[type="text"] {     
     min-width: 165px;    
   }
-  
+
+  .search > div:last-child {
+    margin-bottom: 292px;
+  }
+
+  .search > div:last-child > h4 {    
+    font-size: calc(1rem + 1vmin);   
+  }  
   
 }
 
-
-.info-characters {
-  /* background-color: #282c34; */
+.info-characters {  
   background-color: #026003;
   min-height: 100vh;  
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;  
   justify-content: space-between;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(1rem + 2vmin);
   color: white;
   text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;  
 }
 
-.info-characters > div {
-  /* border: 1px solid white; */
-  margin-bottom: 40px;
+.info-characters > div { 
+  margin-bottom: 40px;  
 }
 

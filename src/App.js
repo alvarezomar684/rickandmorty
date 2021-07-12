@@ -55,8 +55,23 @@ function App() {
     setQueryTerm(query)
   }
 
+  function getRandomInt(min, max) {    
+    return Math.floor(Math.random() * (max - min)) + min;
+  }   
 
- 
+  useEffect(() =>{
+    if(infoPlanet === null){
+      ;(async()=>{        
+        // let url = "https://rickandmortyapi.com/api/location/5"
+        let url = `https://rickandmortyapi.com/api/location/${getRandomInt(1,108)}`
+        const response = await fetch(url).then(res => res.json())                
+        setinfoPlanet(response)
+      })()
+    }
+  },[infoPlanet])
+
+ console.log(infoPlanet)
+ console.log(characters)
  
 
   const urlCharacter01 = characters[0]
